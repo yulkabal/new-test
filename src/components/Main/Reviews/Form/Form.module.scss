@@ -1,0 +1,209 @@
+.Form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   &__wrapper {
+      background-color: #fff;
+      padding: 25px;
+      @media (max-width: 576px) {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         padding: 16px; 
+      }
+      .file {
+               display: none;
+               }   
+      
+      //    .error {
+      //      color: #eb5757;
+      //      font-family: "Gilroy";
+      //      font-style: normal;
+      //      font-weight: 600;
+      //      font-size: 14px;
+      //      line-height: 130%;
+      //      margin-top: -32px;}
+      
+
+      &__top {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 20px;
+         @media(max-width: 576px){
+            width: 100%;
+            justify-content: space-between;  
+         }
+            h2 {
+               color: #333;
+               font-size: 24px;
+               font-weight: 500;
+               font-style: normal;
+               line-height: 28px;
+               font-family: "Factor A";
+               margin: 0;
+               @media(max-width: 576px){
+                  font-size: 14px;
+                  line-height: 18px;
+               }
+            }
+            button {
+               background: none;
+               border: none;
+               cursor: pointer;
+            }
+      }
+      .form {
+         display: flex;
+         flex-direction: column;
+         grid-gap: 32px;
+         @media (max-width: 576px) {
+            align-items: center;
+         }
+         &top1 {
+            display: flex;
+            align-items: flex-end;
+            grid-gap: 16px;
+            @media (max-width: 576px) {
+               display: block;
+            }
+               label {
+                  display: flex;
+                  flex-direction: column;
+                  grid-gap: 14px;
+                  width: 395px;
+                  @media (max-width: 576px) {
+                     width: 256px;
+                  }
+                     p {
+                        color: #333;
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-style: normal;
+                        line-height: 20px;
+                        font-family: "Factor A";
+                        margin: 0;
+                        @media (max-width: 576px) {
+                           font-size: 14px;
+                           line-height: 18px;
+                        }
+                     }
+                     input {
+                        height: 46px;
+                        width: 100%;
+                        @media (max-width: 576px) {
+                           height: 36px;
+                        }
+                     }
+               }
+               .upload {
+                  background: #585CC6; 
+                  height: 52px;
+                  width: 217px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  grid-gap: 11px;
+                  flex-direction: row;
+                  color: #ffffff;
+                  font-size: 18px;
+                  line-height: 18px;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-family: "Gilroy";
+                  border-radius: 2px;
+                  border: none;
+                  margin-top: 12px;
+                  @media (max-width: 576px) {
+                     font-size: 14px;
+                     line-height: 18px;
+                     height: 42px;
+                     width: 149px;
+                  }
+                  input {
+                     display: none;
+                  }
+               }
+         }
+               .text {
+                  display: flex;
+                  flex-direction: column;
+                  grid-gap: 14px;
+                  width: 630px;
+                  @media (max-width: 576px) {
+                     width: 256px;
+                  }
+                        p {
+                           color: #333;
+                           font-size: 16px;
+                           line-height: 20px;
+                           font-weight: 500;
+                           font-style: normal;
+                           margin: 0;
+                           font-family: "Factor A";
+                           @media (max-width: 576px) {
+                              font-size: 14px;
+                              line-height: 18px;
+                           }
+                        }
+                        &__desc {
+                           width: 100%;
+                           height: 100px;
+                        }
+                            
+               }
+                        
+               .submit {
+                  display: flex;
+                  align-items: center;
+                  @media (max-width: 576px) {
+                     display: block;
+                  }
+                     button {
+                        background: #585CC6;
+                        height: 52px;
+                        width: 217px;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 18px;   
+                        border-radius: 2px;   
+                        font-family: "Gilroy";  
+                        color: #fff;        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        grid-gap: 11px;
+                        border: none;
+                        padding: 15px;
+                        margin-top: 12px;
+                        @media (max-width: 576px) {
+                           height: 42px;
+                           width: 149px;
+                           font-size: 14px;
+                           line-height: 18px;      
+                        }
+                     }
+                              
+               .info {
+                  display: flex;
+                  align-items: center;
+                  @media (max-width: 576px) {
+                     width: 256px;
+                  }
+                        p {
+                           font-size: 12px;
+                           line-height: 16px;
+                           font-weight: 400;
+                           font-style: normal;
+                           color: #8A8A8A;
+                           font-family: "Gilroy";
+                        }
+               } 
+            }
+         }     
+   }
+}

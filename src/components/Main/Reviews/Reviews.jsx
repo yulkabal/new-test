@@ -55,7 +55,7 @@ const Reviews = () => {
                     <div className={s.reviews}>
                         <div className={s.reviews__top}>
                             <h2>Отзывы</h2>
-                            <button className={s.reviews__top__button2} >
+                            <button className={s.reviews__top__button2} onClick={() => onSubmit(true)}>
                                 <img src={plus} />
                                + Добавить отзыв
                             </button>
