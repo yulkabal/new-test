@@ -11,13 +11,15 @@ const Header = () => {
                 <div className={s.header__left__photo}>
                     <img src={photo} />
                 </div>
-                    <a>Юлия <span>Бальжинимаева</span></a>
+                <a>
+                    Юлия <span>Бальжинимаева</span>
+                </a>
             </div>
             <div className={s.header__center}>
-               <img src={logo} />
+                <img src={logo} />
             </div>
             <div className={s.header__right}>
-               <Button1 />
+                <Button1 />
             </div>
         </div>
     );

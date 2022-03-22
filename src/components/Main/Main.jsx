@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import s from './Main.module.scss';
-import photoUser from './Img2/user.png'
+import photoUser from './Img2/user.png';
 import icon from './Img2/icon.svg';
-import woman from './Img2/woman.svg'
-import Reviews from "../Main/Reviews/Reviews";
+import woman from './Img2/woman.svg';
+import Reviews from '../Main/Reviews/Reviews';
 
 const Main = () => {
     return (
@@ -45,7 +45,6 @@ const Main = () => {
                                 2021 году окончила СибГМУ по специальности
                                 Педиатрия. Но поняла, что медицина не мое и
                                 начала изучать фронтенд разработку.
-                              
                             </span>
                         </a>
                     </div>

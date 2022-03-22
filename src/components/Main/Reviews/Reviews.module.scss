@@ -1,70 +1,105 @@
-.reviews {
-   background-color: #fff;
-   max-width: 1198px;
-   height: 525px;
-   
-   @media(max-width: 576px){
-      height: 479px;
-      width: 304px;
+.container{
+    display: flex;
+    align-items: flex-end;
+    
+   &__wrapper{
+      background-color: #fff;
+      height: 525px;
+      width: fit-content;
+      overflow: hidden;
+      @media(max-width: 576px){
+         height: 479px;
+         width: 304px;
+      }
+      .slider{
+        height: 525px;
+        width: 1198px;
+        margin-top: 38px;
+        margin-left: 50px;
+        margin-right: 56px;
+       &__card{
+         width: 519px;
+         height: 279px;      
+       }  
+       .rec-pagination{
+          :active{
+            color:red;  
+          }
+         
+       }  
    }
-   &__top{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   
-      h2 {
-         color: #333;
-         font-size: 68px;
-         font-weight: 500;
-         font-style: normal;
-         line-height: 88px;
-         letter-spacing: -0.0124em;
-         margin-top: 56px;
-         margin-left: 80px;
-         @media(max-width: 576px){
-            font-size: 32px;
-            line-height: 42px;
-            margin-top: 20px;
-            margin-left: 16px;
-         }
-      } 
-      &__button2 {
-            display: flex;
-            grid-column-gap: 12px;
-            justify-content: center;
-            align-items: center;
-            background: #585CC6;
-            height: 52px;
-            width: 220px;
-            border-radius: 2px;
-            margin-top: 74px;
-            margin-right: 56px;
-            color: #fff;
-           
-            
-            font-family: 'Gilroy';
+   .reviews {
+      &__top{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      
+         h2 {
+            color: #333;
+            font-size: 68px;
+            font-weight: 500;
             font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 18px;
-            letter-spacing: 0.01em;
-            cursor: pointer;
-            
+            line-height: 88px;
+            letter-spacing: -0.0124em;
+            margin-top: 56px;
+            margin-left: 80px;
             @media(max-width: 576px){
-               height: 42px;
-               width: 42px;
+               font-size: 32px;
+               line-height: 42px;
                margin-top: 20px;
-               margin-right: 15px;
+               margin-left: 16px;
             }
-            img{
-               display: none;
-                @media(max-width: 576px){
-                   display: block;
-                }
+         } 
+         &__button2 {
+               display: flex;
+               grid-column-gap: 12px;
+               justify-content: center;
+               align-items: center;
+               background: #585CC6;
+               height: 52px;
+               width: 220px;
+               border-radius: 2px;
+               margin-top: 74px;
+               margin-right: 56px;
+               color: #fff;
+            
+               
+               font-family: 'Gilroy';
+               font-style: normal;
+               font-weight: 600;
+               font-size: 18px;
+               line-height: 18px;
+               letter-spacing: 0.01em;
+               cursor: pointer;
+               
+               @media(max-width: 576px){
+                  height: 42px;
+                  width: 42px;
+                  margin-top: 20px;
+                  margin-right: 15px;
+               }
+               img{
+                  display: none;
+                  @media(max-width: 576px){
+                     display: block;
+                  }
+               }
             }
-         }
+      }
+   
    }
-  
-}
+   }
+   &__buttonsWrapper {
+      display: flex;
+      margin: 50px 80px 106px 34px;
+      grid-column-gap: 16px;
 
+      .buttons {
+      height: 56px;
+      width: 56px; 
+      background: #E0E0E0;
+      border-radius: 2px;
+      }
+   }  
+}
 
