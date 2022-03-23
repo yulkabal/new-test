@@ -9,8 +9,10 @@ import right from './Img/right.svg';
 import s from './Reviews.module.scss';
 import plus from './Img/plus.svg';
 import 'swiper/css/bundle';
-
 import Card from './Card/Card';
+import Modal from './FormModal/Modal';
+
+
 
 const slides= [
                 {
@@ -42,20 +44,40 @@ const slides= [
                     text: 'Отвечал за найм и адаптацию сотрудников в компании, за поддержание на нужном уровне HR-бренда и трудового настроя коллектива. В компанию пришел без опыта работы HR-ом. Всему научился здесь. Как теории, так и практике. Набрал опыт достаточно быстро. Есть программа обучения, поощряются различные курсы, и это большой плюс. В коллективе очень дружная атмосфера. Все дружелюбные, амбициозные.',
                 },
             ]
-
+           
 
 const Reviews = () => {
+      
+      const[ modal, setModal]= useState(false);
+   
       const sliderRef = useRef(null);
       const [rightState, setRightState] = useState(true);
       const [leftState, setLeftState] = useState(false);
+     
+   //    const handleFormSubmit = ({
 
+   //   }) => { toaster.push(
+   //      {
+   //      message:"<h2>Успешно!</h2><a> Спасибо за отзыв о нашей компании :)</a>",
+   //      variant:"success",
+   //      dismissAfter:"3000"
+   //   },
+   //   {
+   //      message:"",
+   //      variant:"fail",
+   //      dismissAfter:"3000"
+   //   });
+   //    closeModal();
+   //   }
+      
         return (
             <div className={s.container}>
                 <div className={s.container__wrapper}>
                     <div className={s.reviews}>
                         <div className={s.reviews__top}>
                             <h2>Отзывы</h2>
-                            <button className={s.reviews__top__button2} onClick={() => onSubmit(true)}>
+                            <button className={s.reviews__top__button2} onClick={() => setModal(true)}
+                           >
                                 <img src={plus} />
                                + Добавить отзыв
                             </button>
@@ -103,7 +125,12 @@ const Reviews = () => {
                         <img src={right} />
                     </button>
                 </div>
-            </div>
+                 
+                <Modal 
+               isOpen={modal} 
+                onModalClose={() => setModal(false)}
+                />
+           </div>
         );
     }
    

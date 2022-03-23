@@ -1,44 +1,61 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import s from './Form.module.scss';
+import s from './Modal.module.scss';
 import x from './x.svg';
 import plus from './plus.svg';
 import info from './info.svg';
-export default function Form() {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
-        mode: 'onBlur',
-    });
+import * as yup from 'yup';
+
+
+const schema = yup.object().shape({
+   photo: yup.mixed()
+   .required("Загрузить фото")
+   .test("fileSize", "Your file is too big!", (value) => {
+      return value && value[0].size <2000000;
+   }),
+})
+
+ const Modal = (props) => {
+   const {
+              register,
+              handleSubmit,
+              reset,
+              formState: { errors },  
+          } = useForm({
+              mode: 'onBlur',
+              validationSchema: schema,
+          });
 
     const onSubmit = (data) =>
         alert(
-            '<h2>Успешно!</h2><a> Спасибо за отзыв о нашей компании :)</a>',
+            'Успешно!Спасибо за отзыв о нашей компании :)',
             data
         );
 
     return (
-        <div className={s.Form}>
-            <div className={s.Form__wrapper}>
-                <div className={s.Form__wrapper__top}>
+
+       <div className={`s.Modal ${props.isOpen ? 'open' :'close'}`} >
+            <div className={s.Modal__wrapper} >
+                <div className={s.Modal__wrapper__top}>
                     <h2>Отзыв</h2>
-                    {/* onClick={() => setShow(false) */}
-                    <button>
+                    <button onClick={props.onModalClose}>
                         <img src={x} />
                     </button>
                 </div>
                 <form
-                    className={s.Form__wrapper__form}
+                    className={s.Modal__wrapper__form}
                     onSubmit={handleSubmit(onSubmit)}
                 >
-                    <div className={s.Form__wrapper__form__top1}>
+                    <div className={s.Modal__wrapper__form__top1}>
                         <label>
                             <p>Как вас зовут?</p>
                             <input
                                 {...register('name', {
                                     required: 'Поле обязательно к заполнению',
+                                    minLength: {
+                                        value: 5,
+                                        message: 'Минимум 5 символов',
+                                    },
                                     maxLength: {
                                         value: 100,
                                         message: 'Максимум 100 символов',
@@ -47,20 +64,27 @@ export default function Form() {
                                 placeholder="Имя Фамилия"
                             />
                         </label>
+                        {errors?.name && (
+                        <p>
+                            {errors?.name?.message}
+                        </p>
+                    )}
                         <label className={s.upload}>
                             <img src={plus} />
                             Загрузить фото
                             <input
                                 type="file"
                                 name="photo"
-                                // value={values.photo}
-                                // onChange={handleChange}
                                 accept="image/png, image/jpeg"
+                                value={props.photo}
+                                // onChange={handleChange}
+                                
                             />
                         </label>
+                        {errors.photo && <p>{errors.photo.message}</p>}
                     </div>
 
-                    <label className={s.text}>
+                    <label className={s.Modal__wrapper__form__text}>
                         <p>Все ли вам понравилось?</p>
                         <input
                             {...register('text', {
@@ -72,10 +96,11 @@ export default function Form() {
                             })}
                             placeholder="Напишите пару слов о вашем опыте..."
                         />
+                         {errors?.text?.message}
                     </label>
                     <div className={s.submit}>
                         <button type="submit">Отправить отзыв</button>
-                        <div>
+                        <div className={s.info}>
                             <img src={info} />
                             <p>
                                 Все отзывы проходят модерацию в течение 2 часов
@@ -83,15 +108,12 @@ export default function Form() {
                         </div>
                     </div>
                 </form>
-                <div style={{ height: 40 }}>
-                    {errors?.firstName && (
-                        <p>
-                            {errors?.firstName?.message ||
-                                '<div><h3>Что-то не так...</h3><a>Не получилось отправить отзыв. Попробуйте еще раз!</a></div>'}
-                        </p>
-                    )}
-                </div>
             </div>
         </div>
+      
+
+          
+        
     );
 }
+export default Modal;
