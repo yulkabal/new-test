@@ -1,41 +1,14 @@
-.Modal{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   width: 100%;
-   background-color: rgba (0,0,0.3);
-   opacity: 0;
-   pointer-events: none;
-   transition: 0.5s;
-   backdrop-filter: blur(10px);
-   .Modal.open{
-      opacity: 1;
-      pointer-events: all;
-      
-   }
-   .Modal.close{
-      opacity: 0;
-      pointer-events: none;
-   }
-     
+.container{  
    &__wrapper {
-      background-color: #fff;
       padding: 25px;
-      transform: scale(1);
-      transition: 0.4s all;
+      
       @media (max-width: 576px) {
          display: flex;
          align-items: center;
          flex-direction: column;
          padding: 16px; 
       }
-      &__wrapper.active{
-         transform: scale(1);
-      }
+      
       .file {
                display: none;
                }   
@@ -92,7 +65,6 @@
                display: block;
             }
                label {
-                  
                   display: flex;
                   flex-direction: column;
                   grid-gap: 14px;
@@ -140,6 +112,7 @@
                   border-radius: 2px;
                   border: none;
                   margin-top: 12px;
+                  cursor: pointer;
                   @media (max-width: 576px) {
                      font-size: 14px;
                      line-height: 18px;

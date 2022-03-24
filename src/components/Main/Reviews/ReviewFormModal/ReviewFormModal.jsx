@@ -1,21 +1,24 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import s from './Modal.module.scss';
+import s from './ReviewFormModal.module.scss';
 import x from './x.svg';
 import plus from './plus.svg';
 import info from './info.svg';
 import * as yup from 'yup';
+import st from './style.module.css';
+import ReactModal from 'react-modal';
 
 
 const schema = yup.object().shape({
-   photo: yup.mixed()
-   .required("Загрузить фото")
-   .test("fileSize", "Your file is too big!", (value) => {
-      return value && value[0].size <2000000;
-   }),
-})
+    photo: yup
+        .mixed()
+        .required('Загрузить фото')
+        .test('fileSize', 'Your file is too big!', (value) => {
+            return value && value[0].size < 2000000;
+        }),
+});
 
- const Modal = (props) => {
+const ReviewFormModal = ({isOpenFormModal, setIsOpenFormModal, }) => {
    const {
               register,
               handleSubmit,
@@ -26,27 +29,33 @@ const schema = yup.object().shape({
               validationSchema: schema,
           });
 
-    const onSubmit = (data) =>
-        alert(
-            'Успешно!Спасибо за отзыв о нашей компании :)',
-            data
-        );
+
+    const onSubmit = function (data) { 
+      setIsOpenFormModal(false);
+      alert('Успешно!Спасибо за отзыв о нашей компании :)', data);
+    };
+      
 
     return (
-
-       <div className={`s.Modal ${props.isOpen ? 'open' :'close'}`} >
-            <div className={s.Modal__wrapper} >
-                <div className={s.Modal__wrapper__top}>
+       <ReactModal 
+       isOpen={isOpenFormModal} 
+       onRequestClose={() => setIsOpenFormModal(false)}
+       className={st.Modal}
+       overlayClassName={st.OverlayModal}
+       >
+        <div className={s.container}>
+            <div className={s.container__wrapper}>
+                <div className={s.container__wrapper__top}>
                     <h2>Отзыв</h2>
-                    <button onClick={props.onModalClose}>
+                    <button onClick={() => setIsOpenFormModal(false)}>
                         <img src={x} />
                     </button>
                 </div>
                 <form
-                    className={s.Modal__wrapper__form}
+                    className={s.container__wrapper__form}
                     onSubmit={handleSubmit(onSubmit)}
                 >
-                    <div className={s.Modal__wrapper__form__top1}>
+                    <div className={s.container__wrapper__form__top1}>
                         <label>
                             <p>Как вас зовут?</p>
                             <input
@@ -64,27 +73,22 @@ const schema = yup.object().shape({
                                 placeholder="Имя Фамилия"
                             />
                         </label>
-                        {errors?.name && (
-                        <p>
-                            {errors?.name?.message}
-                        </p>
-                    )}
+                        {errors?.name && <p>{errors?.name?.message}</p>}
                         <label className={s.upload}>
                             <img src={plus} />
                             Загрузить фото
                             <input
                                 type="file"
                                 name="photo"
-                                accept="image/png, image/jpeg"
-                                value={props.photo}
-                                // onChange={handleChange}
-                                
+                                accept=".jpg, .png, .jpeg"
+                              //   value={photo}
+                              //   onChange={handleChange}
                             />
                         </label>
                         {errors.photo && <p>{errors.photo.message}</p>}
                     </div>
 
-                    <label className={s.Modal__wrapper__form__text}>
+                    <label className={s.container__wrapper__form__text}>
                         <p>Все ли вам понравилось?</p>
                         <input
                             {...register('text', {
@@ -96,7 +100,7 @@ const schema = yup.object().shape({
                             })}
                             placeholder="Напишите пару слов о вашем опыте..."
                         />
-                         {errors?.text?.message}
+                        {errors?.text?.message}
                     </label>
                     <div className={s.submit}>
                         <button type="submit">Отправить отзыв</button>
@@ -110,10 +114,8 @@ const schema = yup.object().shape({
                 </form>
             </div>
         </div>
-      
-
-          
-        
+        </ReactModal>
     );
-}
-export default Modal;
+   
+};
+export { ReviewFormModal } ;

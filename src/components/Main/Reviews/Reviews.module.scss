@@ -21,12 +21,7 @@
          width: 519px;
          height: 279px;      
        }  
-       .rec-pagination{
-          :active{
-            color:red;  
-          }
          
-       }  
    }
    .reviews {
       &__top{
@@ -90,16 +85,31 @@
    }
    }
    &__buttonsWrapper {
-      display: flex;
+      display: inline-flex;
+      flex-wrap: wrap;
       margin: 50px 80px 106px 34px;
       grid-column-gap: 16px;
 
       .buttons {
+      top: 1400px;
       height: 56px;
       width: 56px; 
-      background: #E0E0E0;
+      background: #FFF;
       border-radius: 2px;
       }
+      @media(max-width: 576px){
+         display: none;
+      }
    }  
+
+.rec-dot {
+   background: #ff4343;
+   border: 2px #333 solid;
+   border-radius: 0;
+ }
+.rec.rec-dot_active {
+   background: #59fd59;
+ }
+ 
 }
 
