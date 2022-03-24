@@ -11,18 +11,8 @@
       
       .file {
                display: none;
-               }   
+      }   
       
-      //    .error {
-      //      color: #eb5757;
-      //      font-family: "Gilroy";
-      //      font-style: normal;
-      //      font-weight: 600;
-      //      font-size: 14px;
-      //      line-height: 130%;
-      //      margin-top: -32px;}
-      
-
       &__top {
          display: flex;
          justify-content: space-between;
@@ -119,6 +109,7 @@
                      height: 42px;
                      width: 149px;
                   }
+                  
                   input {
                      display: none;
                   }
@@ -160,7 +151,7 @@
                   @media (max-width: 576px) {
                      display: block;
                   }
-                     button[type="submit"] {
+                     button {
                         background: #585CC6;
                         height: 52px;
                         width: 217px;

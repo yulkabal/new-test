@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Header.module.scss';
-import photo from './images/Rectangle 1.png';
-import logo from './images/logo.svg';
-import { Button1 } from './Button1/Button1';
+import photo from '../assets/img/Rectangle 1.png';
+import logo from '../assets/img/logo.svg';
+import { ControlBtn } from './ControlBtn/ControlBtn';
 
 const Header = () => {
     return (
@@ -12,14 +12,14 @@ const Header = () => {
                     <img src={photo} />
                 </div>
                 <a>
-                    Юлия <span>Бальжинимаева</span>
+                    Юлия<span> Бальжинимаева</span>
                 </a>
             </div>
             <div className={s.header__center}>
                 <img src={logo} />
             </div>
             <div className={s.header__right}>
-                <Button1 />
+                <ControlBtn />
             </div>
         </div>
     );

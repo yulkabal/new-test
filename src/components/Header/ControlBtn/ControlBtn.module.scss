@@ -1,5 +1,4 @@
-.button1 {
-   
+.ControlBtn {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -28,9 +27,11 @@
    img{
       display: none;
        @media(max-width: 576px){
-          display: block;
+       
+          display: inline-block;
        }
    }
    
 }   
+
 

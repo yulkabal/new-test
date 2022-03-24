@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import vk from './Img/VK.svg';
-import sub from './Img/Subtract.svg';
-import tel from './Img/Tel.svg';
+import vk from '../assets/img/VK.svg';
+import sub from '../assets/img/Subtract.svg';
+import tel from '../assets/img/Tel.svg';
 
 function Footer() {
     return (

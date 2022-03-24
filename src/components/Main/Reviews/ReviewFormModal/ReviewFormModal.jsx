@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import s from './ReviewFormModal.module.scss';
-import x from './x.svg';
-import plus from './plus.svg';
-import info from './info.svg';
+import x from '../../../assets/img/x.svg';
+import plus from '../../../assets/img/plus.svg';
+import info from '../../../assets/img/info.svg';
 import * as yup from 'yup';
 import st from './style.module.css';
 import ReactModal from 'react-modal';
@@ -29,6 +29,7 @@ const ReviewFormModal = ({ isOpenFormModal, setIsOpenFormModal }) => {
     });
 
     const onSubmit = function (data) {
+       reset();
         setIsOpenFormModal(false);
         alert('Успешно!Спасибо за отзыв о нашей компании :)', data);
     };
@@ -67,22 +68,25 @@ const ReviewFormModal = ({ isOpenFormModal, setIsOpenFormModal }) => {
                                             value: 100,
                                             message: 'Максимум 100 символов',
                                         },
+                                         pattern: /^[A-Za-z]+$/i,
                                     })}
                                     placeholder="Имя Фамилия"
                                 />
                             </label>
                             {errors?.name && <p>{errors?.name?.message}</p>}
-                            <label className={s.upload}>
-                                <img src={plus} />
+                            <div>
+                               <label className={s.upload}>
+                                 <img src={plus} />
                                 Загрузить фото
+                                
                                 <input
                                     type="file"
                                     name="photo"
                                     accept=".jpg, .png, .jpeg"
-                                    //   value={photo}
-                                    //   onChange={handleChange}
                                 />
-                            </label>
+                                </label>
+                            </div>
+
                             {errors.photo && <p>{errors.photo.message}</p>}
                         </div>
 

@@ -1,7 +1,15 @@
 .main {
    background-color: #585CC6;
-	padding-top: 93px;
    padding-bottom: 106px;
+	padding-top: 93px;
+   @media (max-width: 767px) {
+      padding-bottom: 83px;
+	   padding-top: 75px;
+   } 
+   @media(max-width: 576px) {
+      padding-bottom: 75px;
+	   padding-top: 68px;
+   }
    &__welcome {
       margin: 93px 203px 0px 80px;
       @media(max-width: 576px) {
@@ -26,7 +34,11 @@
    .userInfo {
       display: flex;
       margin: 88px 80px 120px 80px;
-      @media (max-width: 576px) {
+      @media (max-width: 990px) {
+         margin: 75px 45px 87px 45px;
+         display: block;
+       }
+       @media (max-width: 576px) {
          margin: 64px 16px 57px 16px;
          display: block;
        }
@@ -46,9 +58,20 @@
          margin-bottom: 32px;
          background: #fff;
          padding: 40px;
+         @media(max-width: 1210px){
+            height: 482px;
+            width: 551px;
+            padding: 32px;
+         }
+         @media(max-width: 995px){
+            height: 460px;
+            width: 551px;
+            padding: 32px;
+         }
+
          @media(max-width: 576px){
             padding: 16px;
-            height: 482px;
+            height: 530px;
             width: 288px;
             top: 988px;
             left: 15px;

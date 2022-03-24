@@ -1,15 +1,14 @@
 import { React, useState, useRef } from 'react';
 import { ReviewFormModal } from './ReviewFormModal/ReviewFormModal';
 import Carousel from 'react-elastic-carousel';
-import slide1 from './Img/user1.jpg';
-import slide2 from './Img/user2.png';
-import slide3 from './Img/user3.png';
-import slide4 from './Img/user4.png';
-import left from './Img/left.png';
-import right from './Img/right.svg';
+import slide1 from '../../assets/img/user1.png';
+import slide2 from '../../assets/img/user2.png';
+import slide3 from '../../assets/img/user3.png';
+import slide4 from '../../assets/img/user4.png';
+import left from '../../assets/img/left.png';
+import right from '../../assets/img/right.svg';
+import plus from '../../assets/img/plus.svg';
 import s from './Reviews.module.scss';
-import plus from './Img/plus.svg';
-import 'swiper/css/bundle';
 import Card from './Card/Card';
 import Modal from 'react-modal';
 
@@ -46,15 +45,16 @@ const slides = [
     },
 ];
 
+
+
 const Reviews = () => {
     const [isOpenFormModal, setIsOpenFormModal] = useState(false);
 
     const sliderRef = useRef(null);
-    const [rightState, setRightState] = useState(true);
-    const [leftState, setLeftState] = useState(false);
+   
     const breakPoints = [
-        { width: 576, itemsToShow: 1 },
-        { width: 1200, itemsToShow: 2 },
+        { width: 1, itemsToShow: 1 },
+        { width: 576, itemsToShow: 2 },
     ];
 
     return (
@@ -64,7 +64,7 @@ const Reviews = () => {
                     <div className={s.reviews__top}>
                         <h2>Отзывы</h2>
                         <button
-                            className={s.reviews__top__button2}
+                            className={s.reviews__top__buttonReview}
                             onClick={() => setIsOpenFormModal(true)}
                         >
                             <img src={plus} />+ Добавить отзыв
@@ -104,7 +104,7 @@ const Reviews = () => {
                 </button>
                 <button
                     className={s.buttons}
-                    onClick={() => sliderRef.current?.slideNext()}
+                    onClick={() => sliderRef.current.slideNext()}
                 >
                     <img src={right} />
                 </button>

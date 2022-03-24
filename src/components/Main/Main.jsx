@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Main.module.scss';
-import photoUser from './Img2/user.png';
-import icon from './Img2/icon.svg';
-import woman from './Img2/woman.svg';
+import photoUser from '../assets/img/user.png';
+import icon from '../assets/img/icon.svg';
+import woman from '../assets/img/woman.svg';
 import Reviews from '../Main/Reviews/Reviews';
 
 const Main = () => {
