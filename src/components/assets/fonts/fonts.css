@@ -1,0 +1,17 @@
+@font-face {
+   font-family: 'Factor A';
+   src: local('Factor A Regular'), local('FactorA-Regular'),
+       url('FactorA-Regular.woff2') format('woff2'),
+       url('FactorA-Regular.woff') format('woff'),
+       url('FactorA-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+ @font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Regular'), local('Gilroy-Regular'),
+      url('../fonts/gilroy-regular.woff2') format('woff2'), 
+		url('../fonts/gilroy-regular.woff') format('woff'), 
+		url('../fonts/gilroy-regular.ttf') format('truetype');
+}
+

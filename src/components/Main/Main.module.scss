@@ -2,6 +2,9 @@
    background-color: #585CC6;
    padding-bottom: 106px;
 	padding-top: 93px;
+   background-image: url(../assets/img/1vector.png);
+   background-position: top -10px right 5px;
+   background-repeat: no-repeat;
    @media (max-width: 767px) {
       padding-bottom: 83px;
 	   padding-top: 75px;
@@ -23,6 +26,7 @@
          letter-spacing: -1.24%;
          line-height: 148px;
          color: #fff;
+         font-family: 'Factor A';
          @media(max-width: 576px){
             font-size: 48px;
             line-height: 54px;
@@ -92,6 +96,7 @@
                font-weight: 700;
                font-style: normal;
                line-height: 32px;
+               font-family: 'Factor A';
                @media(max-width: 576px){
                   font-size: 24px;
                   line-height: 32px;
@@ -104,6 +109,7 @@
                font-size: 18px;
                line-height: 24px;
                margin: 0;
+               font-family: 'Gilroy';
                @media(max-width: 576px){
                   font-size: 16px;
                   line-height: 22px;
@@ -120,6 +126,7 @@
             line-height: 24px;
             letter-spacing: 0.01em;
             margin: 20px 0px 18px 0px;
+            font-family: 'Gilroy';
             @media(max-width: 576px){
                font-size: 16px;
                line-height: 22px;

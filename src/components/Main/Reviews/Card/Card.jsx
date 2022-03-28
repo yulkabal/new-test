@@ -12,7 +12,7 @@ const SliderItem = ({ imgUrl, userName, text, date }) => {
                     <div className={s.SliderItem__wrapper__top__name}>
                         <h4>{userName}</h4>
                     </div>
-                    <div>
+                    <div className={s.SliderItem__wrapper__top__date}>
                         <a>{date}</a>
                     </div>
                 </div>
