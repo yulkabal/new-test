@@ -1,9 +1,15 @@
 {
   "files": {
-    "main.css": "/new-test-ilink/static/css/main.7e1d735f.css",
-    "main.js": "/new-test-ilink/static/js/main.d7c0d433.js",
+    "main.css": "/new-test-ilink/static/css/main.0a2df50a.css",
+    "main.js": "/new-test-ilink/static/js/main.665f7dfd.js",
     "static/js/787.4cdf1fc5.chunk.js": "/new-test-ilink/static/js/787.4cdf1fc5.chunk.js",
     "static/media/user.png": "/new-test-ilink/static/media/user.7ccbc6486693ae66a47f.png",
+    "static/media/gilroy-regular.ttf": "/new-test-ilink/static/media/gilroy-regular.b91b0127c56a8e5f9e83.ttf",
+    "static/media/FactorA-Regular.ttf": "/new-test-ilink/static/media/FactorA-Regular.144a180e589c9ab6e7bf.ttf",
+    "static/media/gilroy-regular.woff2": "/new-test-ilink/static/media/gilroy-regular.00b026798f05ff9d7752.woff2",
+    "static/media/1vector.png": "/new-test-ilink/static/media/1vector.e29f65b7f55ac848c5f3.png",
+    "static/media/FactorA-Regular.woff": "/new-test-ilink/static/media/FactorA-Regular.0b48626533dbf8291095.woff",
+    "static/media/FactorA-Regular.woff2": "/new-test-ilink/static/media/FactorA-Regular.f5b2e09c6ad335835b9c.woff2",
     "static/media/logo.svg": "/new-test-ilink/static/media/logo.1371781c1786800d2f6be3b54b54a0e0.svg",
     "static/media/icon.svg": "/new-test-ilink/static/media/icon.3cce3a7e454501f57629f41a68262727.svg",
     "static/media/Subtract.svg": "/new-test-ilink/static/media/Subtract.7036817b06b7399f5c227a124885f5b9.svg",
@@ -16,12 +22,13 @@
     "static/media/right.svg": "/new-test-ilink/static/media/right.abe4099701376fbbf16fedf1af7efc3e.svg",
     "static/media/x.svg": "/new-test-ilink/static/media/x.eee09798ef67c3a7969cd02dda9063b9.svg",
     "static/media/plus.svg": "/new-test-ilink/static/media/plus.9b1b6514ceb626b913d7db92bc1b479c.svg",
-    "main.7e1d735f.css.map": "/new-test-ilink/static/css/main.7e1d735f.css.map",
-    "main.d7c0d433.js.map": "/new-test-ilink/static/js/main.d7c0d433.js.map",
+    "static/media/gilroy-regular.woff": "/new-test-ilink/static/media/gilroy-regular.31d6cfe0d16ae931b73c.woff",
+    "main.0a2df50a.css.map": "/new-test-ilink/static/css/main.0a2df50a.css.map",
+    "main.665f7dfd.js.map": "/new-test-ilink/static/js/main.665f7dfd.js.map",
     "787.4cdf1fc5.chunk.js.map": "/new-test-ilink/static/js/787.4cdf1fc5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e1d735f.css",
-    "static/js/main.d7c0d433.js"
+    "static/css/main.0a2df50a.css",
+    "static/js/main.665f7dfd.js"
   ]
 }
