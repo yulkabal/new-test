@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/new-test-ilink/static/css/main.0a2df50a.css",
-    "main.js": "/new-test-ilink/static/js/main.665f7dfd.js",
+    "main.css": "/new-test-ilink/static/css/main.c1a8dc07.css",
+    "main.js": "/new-test-ilink/static/js/main.b0176118.js",
     "static/js/787.4cdf1fc5.chunk.js": "/new-test-ilink/static/js/787.4cdf1fc5.chunk.js",
     "static/media/user.png": "/new-test-ilink/static/media/user.7ccbc6486693ae66a47f.png",
     "static/media/gilroy-regular.ttf": "/new-test-ilink/static/media/gilroy-regular.b91b0127c56a8e5f9e83.ttf",
@@ -23,12 +23,12 @@
     "static/media/x.svg": "/new-test-ilink/static/media/x.eee09798ef67c3a7969cd02dda9063b9.svg",
     "static/media/plus.svg": "/new-test-ilink/static/media/plus.9b1b6514ceb626b913d7db92bc1b479c.svg",
     "static/media/gilroy-regular.woff": "/new-test-ilink/static/media/gilroy-regular.31d6cfe0d16ae931b73c.woff",
-    "main.0a2df50a.css.map": "/new-test-ilink/static/css/main.0a2df50a.css.map",
-    "main.665f7dfd.js.map": "/new-test-ilink/static/js/main.665f7dfd.js.map",
+    "main.c1a8dc07.css.map": "/new-test-ilink/static/css/main.c1a8dc07.css.map",
+    "main.b0176118.js.map": "/new-test-ilink/static/js/main.b0176118.js.map",
     "787.4cdf1fc5.chunk.js.map": "/new-test-ilink/static/js/787.4cdf1fc5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a2df50a.css",
-    "static/js/main.665f7dfd.js"
+    "static/css/main.c1a8dc07.css",
+    "static/js/main.b0176118.js"
   ]
 }
