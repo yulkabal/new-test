@@ -92,7 +92,7 @@ const ReviewFormModal = ({ isOpenFormModal, setIsOpenFormModal }) => {
 
                         <label className={s.container__wrapper__form__text}>
                             <p>Все ли вам понравилось?</p>
-                            <input
+                            <textarea
                                 {...register('text', {
                                     required: 'Поле обязательно к заполнению',
                                     maxLength: {

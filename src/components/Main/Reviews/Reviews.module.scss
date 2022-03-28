@@ -92,6 +92,15 @@
                      display: block;
                   }
                }
+               &:hover {
+                  background: #696DC8;
+                  transition: 0.3s;
+                  
+                }
+                &:active {
+                  background: #797DDF;
+                  transition: 0.04s;
+                }
             }
       }
    
