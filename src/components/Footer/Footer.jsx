@@ -7,9 +7,9 @@ import tel from '../assets/img/Tel.svg';
 function Footer() {
     return (
         <div className={s.footer}>
-            <div className={s.footer__ilink}>
+            <div className={s.footer__name}>
                 <a>
-                    © iLINK ACADEMY.ALL RIGHTS RESERVED.
+                    © TEST LANDING. ALL RIGHTS RESERVED.
                     {new Date().getFullYear()}
                 </a>
             </div>
